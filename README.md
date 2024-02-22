@@ -12,13 +12,13 @@ There are some slides in `/slides` which I use for introducing the concepts.
 
 ## Demonstration - getting to grips with {targets}
 
-In order to demonstrate {targets} functionality, I show to a basic R script can be written as a {targets} pipeline. This pipeline takes a csv of two numeric variables, `x` and `y` and produces a plot with a linear model prediction.
+In order to demonstrate {targets} functionality, I show how a basic R script can be written as a {targets} pipeline. This pipeline takes a csv of two numeric variables, `x` and `y` and produces a plot with a linear model prediction.
 
 The first script `0_generate_test_data.R` sets up some example data to use in the demonstration. It creates an `inputs` and `outputs` folders (which are ignored by git).
 
 I first walk through how you might write this script with a "business as usual" approach, no {targets}. This is demonstrated in `1_non_targets_version.R` and does all the things you'd expect how it might work if you didn't use targets.
 
-I then use `2_targets_version.R` as a reference for myself but don't show it to participants. The next step is showing how you build a pipeline rthrough the following steps
+I then use `2_targets_version.R` as a reference for myself but don't show it to participants. Encourge users to create their own `_targets.R` file and create the pipeline step by step. These are roughly the steps I walk through to demonstrate the usage of {targets}:
 
  - Create a `_targets.R` file
  - Add `library(targets)`
@@ -31,7 +31,11 @@ I then use `2_targets_version.R` as a reference for myself but don't show it to 
  - Add the rest of the pipeline, including explaining how outputs (noting how the function returns file path not R object), highlight use of `format="file"` again.
  - Get participants to ask questions and modify pipeline in response to demosntrate your answer
 
-## Extensions to demonstrate
+## Extra bits
 
- - How to put your R functions in separate files and source them
- - How to have multiple targets dependant on the same target
+`3_static_branching.R` shows how you can do static branching by subsetting the iris dataset by species and producing a species for each plot.
+
+Other things you might want to cover:
+
+ - How to put your R functions in separate files (eg. `R/functions.R`) and source them from `_targets.R` to help you organise your code.
+ - How to have multiple targets dependent on the same target
