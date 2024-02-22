@@ -1,4 +1,4 @@
-# A very minimal {targets} demonstration and exersises
+# A very minimal {targets} demonstration and exercises
 
 ## Overview
 
