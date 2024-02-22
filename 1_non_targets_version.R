@@ -22,3 +22,14 @@ title("My nice plot")
 dev.off()
 
 
+# or a ggplot
+library(ggplot2)
+p1 <- ggplot(df,aes(x = x,y = y))+
+  geom_point()+
+  geom_line(data = pred1,col="red")+
+  ggtitle("My nice plot")
+
+p1
+ggsave("outputs/plot.png",p1)
+
+
