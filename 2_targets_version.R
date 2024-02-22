@@ -1,4 +1,5 @@
-#save this file as _targets.R
+#Here is a pipelined version of the 1_non... file. Don't run this file directly but use it as a reference as you create a _targets.R file and build up your pipeline.
+
 library(targets)
 library(ggplot2)
 # This is an example _targets.R file. Every
