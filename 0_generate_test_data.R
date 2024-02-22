@@ -11,3 +11,7 @@ write.csv(df,"inputs/data2.csv",row.names = F)
 rm(df)
 rm(x)
 rm(y)
+
+
+
+write.csv(iris,"inputs/iris.csv")

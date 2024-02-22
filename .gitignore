@@ -4,4 +4,7 @@
 .Ruserdata
 
 _targets.R
-targets
+_targets
+
+inputs
+outputs
