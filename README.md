@@ -27,9 +27,11 @@ I then use `2_targets_version.R` as a reference for myself but don't show it to 
  - Then do `tar_visnetwork()` then `tar_make()` then `tar_visnetwork()` again to show how it updates the graph
  - Add `tar_target(data, read.csv(data_file))`
  - Define a function to model the data and add `tar_target(data_model, model_data(data))`. Do `tar_visnetwork()` to show how functions appear.
+ - Explain how the tracking works, take a look in the `targets` folder and show `tar_read()`
  - Add the rest of the pipeline, including explaining how outputs (noting how the function returns file path not R object), highlight use of `format="file"` again.
  - Get participants to ask questions and modify pipeline in response to demosntrate your answer
 
-## Exersises
+## Extensions to demonstrate
 
-tbc
+ - How to put your R functions in separate files and source them
+ - How to have multiple targets dependant on the same target
